@@ -28,17 +28,26 @@ public class MusteriRepsitory {
     private List<Musteri> musteriList = new ArrayList<>();
 
     public void RastGeleMusteriListesiOlustur(){
+        for(long i=1;i<8;i++){
+            Musteri musteri = new Musteri();
+            musteri.setId(i);
+            musteri.setAd("Müşteri-"+i);
+            musteri.setSoyad("Soyad-"+i);
+            musteri.setAdres("Ankara");
+            musteri.setTckimlik("121321123213");
+            musteri.setTelefon("0 555 444 1144");
+            /**
+             * Muşteri Listesi-> add(ekle)-> musteri nesnesi
+             */
+            musteriList.add(musteri);
+        }
+    }
 
-        Musteri musteri = new Musteri();
-        musteri.setId(1L);
-        musteri.setAd("Müşteri-");
-        musteri.setSoyad("Soyad-");
-        musteri.setAdres("Ankara");
-        musteri.setTckimlik("121321123213");
-        musteri.setTelefon("0 555 444 1144");
-        /**
-         * Muşteri Listesi-> add(ekle)-> musteri nesnesi
-         */
-        musteriList.add(musteri);
+    public List<Musteri> getMusteriList() {
+        return musteriList;
+    }
+
+    public void setMusteriList(List<Musteri> musteriList) {
+        this.musteriList = musteriList;
     }
 }
